@@ -9,13 +9,13 @@
 class FarmUnit
 {
     public:
-        virtual void increaseProduction();
-        virtual void harvestCrops(int currAmount);
-        virtual int getLeftOverCapacity();
-        virtual int getTotalCapacity();
-        virtual void harvestCrops(int currentAmountOfCrops);
-        virtual void setState(SoilState* state);
-        virtual std::string getSoilStateName();
+        virtual void increaseProduction() = 0;
+        virtual void harvestCrops(int currAmount) = 0;
+        virtual int getLeftOverCapacity() = 0;
+        virtual int getTotalCapacity() = 0;
+        virtual void harvestCrops(int currentAmountOfCrops) = 0;
+        virtual void setState(SoilState* state) = 0;
+        virtual std::string getSoilStateName() = 0;
 
 
 };
