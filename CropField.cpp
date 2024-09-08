@@ -42,17 +42,17 @@ void CropField::setState(SoilState* newState)
 
 void CropField::rain()
 {
-    //soilState->rain(this);
+    soilState->rain(this);
 
-    switch(soilState->getName()[0]) 
-    {
-        case 'D': //DrySoil
-            setState(new FruitfulSoilState());
-            break;
-        case 'F': //Fruitful or Flooded goes to Flooded state
-            setState(new FloodedSoilState());
-            break;
-    }
+    // switch(soilState->getName()[0]) 
+    // {
+    //     case 'D': //DrySoil
+    //         setState(new FruitfulSoilState());
+    //         break;
+    //     case 'F': //Fruitful or Flooded goes to Flooded state
+    //         setState(new FloodedSoilState());
+    //         break;
+    // }
 }
 
 SoilState* CropField::getSoilState()
