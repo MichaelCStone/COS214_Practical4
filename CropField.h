@@ -4,9 +4,10 @@
 #include <iostream>
 #include <string>
 
+#include "FarmUnit.h"
 #include "SoilState.h"
 
-class CropField
+class CropField : public FarmUnit
 {
     private:
         std::string cropType;
@@ -20,7 +21,7 @@ class CropField
         CropField(std::string cropType, int storageCapacity, int currAmount, SoilState* soilState);
         int getTotalCapacity();
         std::string getCropType();
-        std::string getSoilStateName(); //type is probably Soil class?
+        std::string getSoilStateName();
 
         //void setCurrAmountCrops(int currAmount); //added
 
